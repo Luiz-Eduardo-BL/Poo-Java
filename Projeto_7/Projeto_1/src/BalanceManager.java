@@ -34,26 +34,19 @@ class BalanceManager {
     return this.extract;
   }
   //metodo sobrescrito para retornar apenas as últimas qtdOp operações
-  // Deve ser possível extornar, pagando de volta, tarifas passando uma lista de índices.
-  // Apenas efetue a operação de extorno dos índices válidos que forem tarifas.
-
   public List<Operation> getExtract(int qtdOp){
+    List<Operation> extract = new ArrayList<Operation>(qtdOp);
     // Retornar todas as movimentações da conta desde a abertura
     if(qtdOp == 0){
       return this.extract;
     }else{
-      // Retornar as últimas qtdOp movimentações da conta
-      List<Operation> extract = new ArrayList<Operation>(qtdOp);
-      int i = 0;
-      while(i < qtdOp){
-        extract.add(this.extract.get(this.extract.size() - i - 1));
-        i++;
-      }
-      return extract;
+      // Retornar as últimas qtdOp movimentações da conta do maior para o menor índice
+    for(int i = this.extract.size() - 1; i >= 0 && extract.size() < qtdOp; i--){
+      extract.add(this.extract.get(i));
+    }
+    return extract;
     }
   }
-    // A descrição pode ser "opening", "withdraw", "deposit", "fee", "reverse".
-    // Os saques devem ter valor negativo e os depósitos positivos.
 
   //retorna o valor do balance
   public String toString(){

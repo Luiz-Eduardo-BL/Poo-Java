@@ -40,10 +40,10 @@ class Account {
       if(operation.getLabel() == Label.fee){
         this.balanceManager.addOperation(Label.reverse, operation.getValue());
         return true;
-      }else{
-        System.out.println("fail: index " + index + " invalid");
-        return false;
       }
+    }else{
+      System.out.println("fail: index " + index + " invalid");
+      return false;
     }
     return false;
   }
