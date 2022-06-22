@@ -1,7 +1,4 @@
 # Relógio & Utilizando os comandos set para manter a hora correta
-
-![](figura.jpg)
-
 <!--TOC_BEGIN-->
 - [Descrição](#descrição)
 - [Diagrama](#diagrama)
