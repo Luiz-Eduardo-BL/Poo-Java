@@ -1,6 +1,4 @@
 # Grafite & Lapiseira com um único grafite
-![](figura.jpg)
-
 [](Solver.java)
 
 <!--TOC_BEGIN-->
