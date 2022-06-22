@@ -1,7 +1,4 @@
 # Calculadora & Utilizando uma calculadora que gasta e recarrega bateria
-
-![](figura.jpg)
-
 <!--TOC_BEGIN-->
 - [Requisitos](#requisitos)
 - [Shell](#shell)
